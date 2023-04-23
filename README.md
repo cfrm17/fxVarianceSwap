@@ -27,7 +27,7 @@ The rates are quoted as   and Vega amount currency is either USD or EUR.
 1. Vega amount currency = USD
 The expected payoff is defined as   in USD. The price of the contract in USD is obtained by discounting the expected payoff with USD.
                                              (4)
-where   is the discount factor between the value date and the settle date of the swap. As shown in (4), the price does not have any dependence on spot rate. Thus, the delta is zero in this case.  See https://finpricing.com/lib/EqCallable.html
+where   is the discount factor between the value date and the settle date of the swap. As shown in (4), the price does not have any dependence on spot rate. Thus, the delta is zero in this case.
 
 2. Vega amount currency = EUR
 The expected payoff at the expiry is defined as   in USD and   is the forward FX rate for the expiry date in USD/EUR. The price of the contract in USD is obtained by
@@ -76,4 +76,8 @@ Settle Date (For Value) = Observation Date + Lag
 and the Lag = 1 business day for indirect quote and 2 business days for direct quote. For example, Atlas valuation date is observation date and Atlas spot date is the settlement date of the Atlas valuation date. In table 2, Start Date (= ) and Expiry Date (= ) are observation date, and Settle Date (= ) is settlement date. If we distinguish the settlement dates with asterisk, the discount factor is written more specifically as:
  
 where   is the valuation date for the analyses in this report and  . Implied volatility and other calculations are done based on observation dates. 
+
+Reference:
+
+https://finpricing.com/curveVolList.html
 
